@@ -1,0 +1,89 @@
+{
+  "configVersion": 1,
+  "timestamp": 1736536004862,
+  "index": "/the-molt-character-generator/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/the-molt-character-generator/favicon.ico",
+        "/the-molt-character-generator/index.html",
+        "/the-molt-character-generator/main-43RDSYEW.js",
+        "/the-molt-character-generator/manifest.webmanifest",
+        "/the-molt-character-generator/polyfills-FFHMD2TL.js",
+        "/the-molt-character-generator/styles-GWRYTGN6.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/the-molt-character-generator/assets/fonts/Alegreya.ttf",
+        "/the-molt-character-generator/assets/fonts/MetalMania.ttf",
+        "/the-molt-character-generator/assets/fonts/Skranji-Bold.ttf",
+        "/the-molt-character-generator/assets/fonts/Skranji-Regular.ttf",
+        "/the-molt-character-generator/icons/android-chrome-192x192.png",
+        "/the-molt-character-generator/icons/android-chrome-512x512.png",
+        "/the-molt-character-generator/icons/apple-touch-icon.png",
+        "/the-molt-character-generator/icons/favicon-16x16.png",
+        "/the-molt-character-generator/icons/favicon-32x32.png",
+        "/the-molt-character-generator/media/Alegreya-JSGAVCRA.ttf",
+        "/the-molt-character-generator/media/MetalMania-5IXLQWC4.ttf",
+        "/the-molt-character-generator/media/Skranji-Bold-GHJDPRNH.ttf",
+        "/the-molt-character-generator/media/Skranji-Regular-3P2KO6WS.ttf"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/the-molt-character-generator/assets/fonts/Alegreya.ttf": "6609880948728419617455150aea67982b0319c1",
+    "/the-molt-character-generator/assets/fonts/MetalMania.ttf": "f8361b31da9fd6e87019291416a293a48f55627d",
+    "/the-molt-character-generator/assets/fonts/Skranji-Bold.ttf": "fd5ec6c20a4830ee25ea31a08beb9023848854c3",
+    "/the-molt-character-generator/assets/fonts/Skranji-Regular.ttf": "a1590d7b5d58c3383d3bdcf5d1020af4bcc8a7df",
+    "/the-molt-character-generator/favicon.ico": "242cad7e8e4d0fe3f88b25a7fde0eca00e084f60",
+    "/the-molt-character-generator/icons/android-chrome-192x192.png": "e62cbc755cc0fe980c851556714606aaeaf5acef",
+    "/the-molt-character-generator/icons/android-chrome-512x512.png": "d9ef17eee14c6b418c32bee40f2919c32f901598",
+    "/the-molt-character-generator/icons/apple-touch-icon.png": "f7a0359ce84ef106e37638fca5314f511e6e343b",
+    "/the-molt-character-generator/icons/favicon-16x16.png": "ccdfcafd6e7f9e8e59ffc1cd4a3e2782dc8bd12f",
+    "/the-molt-character-generator/icons/favicon-32x32.png": "3171483e64c7c3d4a33dc03a0f60c836cd6156ea",
+    "/the-molt-character-generator/index.html": "332663c51cd6e41fb0d43d68ba11a89562e62711",
+    "/the-molt-character-generator/main-43RDSYEW.js": "fb14ed7c4ae64baa996a88ff1c1760eab9b4f0dd",
+    "/the-molt-character-generator/manifest.webmanifest": "56fbbe6331bed1165905e562f7dc79c84b81643d",
+    "/the-molt-character-generator/media/Alegreya-JSGAVCRA.ttf": "6609880948728419617455150aea67982b0319c1",
+    "/the-molt-character-generator/media/MetalMania-5IXLQWC4.ttf": "f8361b31da9fd6e87019291416a293a48f55627d",
+    "/the-molt-character-generator/media/Skranji-Bold-GHJDPRNH.ttf": "fd5ec6c20a4830ee25ea31a08beb9023848854c3",
+    "/the-molt-character-generator/media/Skranji-Regular-3P2KO6WS.ttf": "a1590d7b5d58c3383d3bdcf5d1020af4bcc8a7df",
+    "/the-molt-character-generator/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/the-molt-character-generator/styles-GWRYTGN6.css": "27633fe3fc2f70d55651427f206f42df9c72ca9d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
