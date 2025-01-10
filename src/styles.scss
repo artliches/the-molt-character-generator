@@ -1,1 +1,106 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Alegreya";
+    src: local('Alegreya'), url(../public/assets/fonts/Alegreya.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "MetalMania";
+    src: local('MetalMania'), url(../public/assets/fonts/MetalMania.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Skranji-Bold";
+    src: local('Skranji-Bold'), url(../public/assets/fonts/Skranji-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Skranji-Regular";
+    src: local('Skranji-Regular'), url(../public/assets/fonts/Skranji-Regular.ttf) format('truetype');
+}
+
+:root {
+    --yellow: #FFE900;
+    --off-white: #ebebeb;
+    --cBlack: hsl(0, 0%, 0%);
+
+    --larger: 2rem;
+    --large: 1.5rem;
+    --standard: 1rem;
+    --small: 0.875rem;
+
+    --card-padding: 0.5rem;
+    --card-border-color: hsl(0, 0%, 20%);
+    --card-border: 2px solid var(--card-border-color);
+}
+
+html, body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+body {
+    background-color: var(--yellow);
+    color: black;
+    font-family: 'Alegreya';
+    font-size: va(--standard);
+}
+
+.molt-card {
+    height: 100%;
+    padding: var(--card-padding);
+    background-color: black;
+    color: var(--off-white);
+    border: var(--card-border);
+    box-shadow: 5px 5px 0 var(--card-border-color);
+    display: flex;
+    gap: var(--card-padding);
+    flex-direction: column;
+
+    .molt-card-header {
+        align-self: center;
+        width: max-content;
+        padding: 0 var(--card-padding);
+        background-color: var(--yellow);
+        font-family: 'Skranji-Bold';
+        font-size: var(--large);
+        color: black;
+        border: 2px solid goldenrod;
+        box-shadow: 5px 5px 0 goldenrod;
+
+        &:hover {
+            background-color: black;
+            color: var(--yellow);
+            border: 2px solid goldenrod;
+            transition: all .06s ease-in-out !important;
+        }
+        &:active {
+            transform: translate(5px, 5px);
+            box-shadow: none;
+        }
+    }
+    .molt-card-body {
+        border-top: 2px solid var(--yellow);
+        padding: var(--card-padding) 0;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.info {
+    background-color: var(--yellow);
+    color: black;
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+    &:active {
+        background-color: var(--yellow);
+        color: black;
+    }
+}

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AbilitiesComponent } from "./abilities/abilities.component";
+import { IdentityComponent } from "./identity/identity.component";
+import { JobComponent } from "./job/job.component";
+import { EquipmentComponent } from "./equipment/equipment.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [AbilitiesComponent, IdentityComponent, JobComponent, EquipmentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
