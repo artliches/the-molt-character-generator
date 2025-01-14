@@ -11,14 +11,23 @@
         text-align: center;
     }
     header {
+        color: var(--off-white);
         font-family: 'MetalMania';
         letter-spacing: var(--small);
         font-size: 4.5rem;
+        -webkit-text-stroke: 1px black;
     }
     footer {
         border-top: 2px solid black;
         padding-top: 1rem;
         font-size: var(--small);
+        div {
+            background-color: rgba( 0, 0, 0, 0.6 );
+            height: max-content;
+            // backdrop-filter: blur(10px);
+            text-align: center;
+            color: var(--off-white);
+        }
     }
 
     .molt-body-layout {

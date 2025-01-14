@@ -1,8 +1,8 @@
 {
   "name": "the-molt-character-generator",
   "short_name": "the-molt-character-generator",
-  "theme_color": "#FFE900",
-  "background_color": "#FFE900",
+  "theme_color": "#F7931D",
+  "background_color": "#F7931D",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
