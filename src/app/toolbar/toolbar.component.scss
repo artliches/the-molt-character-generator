@@ -1,0 +1,23 @@
+.toolbar-layout {
+    border-bottom: 2px solid black;
+    display: flex;
+    gap: 1rem;
+    font-family: 'Skranji-Bold';
+    font-size: var(--standard);
+
+    div {
+        background-color: var(--yellow);
+        padding: 0 var(--card-padding);
+        border: 2px solid black;
+        box-shadow: 5px 0px 0 black;
+
+        &:hover {
+            background-color: var(--orange);
+            transition: all .06s ease-in-out !important;
+        }
+        &:active {
+            transform: translate(5px, 0px);
+            box-shadow: none;
+        }
+    }
+}

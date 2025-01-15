@@ -1,10 +1,23 @@
 <div class="molt-card odd">
-    <div class="molt-card-header clickable">
-        JOB
+    <div (click)="emitNewJob()" class="molt-card-header clickable">
+        <span class="job-name">{{currentJob.name}}</span> <span class="sub-name">{{currentJob.subName}}</span>
     </div>
     <div class="molt-card-body">
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Morbi velit mus habitant fermentum vulputate. Aenean quam lacus vestibulum nibh augue egestas morbi primis mauris. Euismod lacinia diam laoreet placerat; libero cubilia. Sagittis id imperdiet pulvinar a commodo massa dapibus. Nulla sollicitudin auctor curae suspendisse metus mus.
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Morbi velit mus habitant fermentum vulputate. Aenean quam lacus vestibulum nibh augue egestas morbi primis mauris. Euismod lacinia diam laoreet placerat; libero cubilia. Sagittis id imperdiet pulvinar a commodo massa dapibus. Nulla sollicitudin auctor curae suspendisse metus mus.
-
+        <em [innerHTML]="currentJob.descrip"></em>
+        @if (currentJob.extras) {
+            <div class="extras-section">
+                @for (extra of currentJob.extras; track $index) {
+                    <div [innerHTML]="extra"></div>
+                }
+            </div>
+        }
+        <div class="details-section">
+            <strong (click)="rerollDetails()" class="clickable info details-title">{{currentJob.details.title}}</strong>
+            <span [innerHTML]="chosenJobObj.details"></span>
+        </div>
+        <div>
+            <strong (click)="rerollTraits()" class="clickable info">{{chosenJobObj.traits.title}}</strong>
+            <span [innerHTML]="chosenJobObj.traits.descrip"></span>
+        </div>
     </div>
 </div>

@@ -1,0 +1,50 @@
+@mixin flex-column($gap: var(--small)) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+.details-section {
+    @include flex-column(0rem);
+    .details-title {
+        width: max-content;
+    }
+}
+
+.molt-card-header {
+    @include flex-column(0rem);
+    text-align: center;
+    .job-name {
+        border-bottom: 2px solid black;
+    }
+}
+
+.molt-card-body {
+    @include flex-column;
+    :nth-child(odd) {
+        transform: rotate(-0.5deg);
+    }
+    :nth-child(even) {
+        transform: rotate(0.5deg);
+    }
+}
+
+.extras-section {
+    padding: var(--card-padding);
+    border: 2px dashed var(--orange);
+    @include flex-column(1rem);
+}
+
+@media only screen and (min-width: 425px) {
+    .molt-card-header {
+        flex-direction: row;
+        gap: var(--small);
+        .job-name {
+            border: none;
+        }
+        .sub-name:before {
+            content: '|';
+            padding-right: var(--small);
+        }
+    }
+}

@@ -32,7 +32,6 @@
 
     .molt-body-layout {
         .molt-body {
-            border-top: 2px solid black;
             padding-top: 1rem;
             display: flex;
             flex-direction: column;
@@ -50,9 +49,15 @@
                 grid-auto-rows: min-content;
                 grid-gap: unset;
                 grid-template-areas: 
+                    "toolbar    toolbar"
                     "abilities  abilities"
                     "identity   job"
                     "equipment  equipment";
+
+                .toolbar {
+                    grid-area: toolbar;
+                    margin-bottom: 0.5rem;
+                }
                 .abilities {
                     grid-area: abilities;
                     margin-bottom: 2rem;

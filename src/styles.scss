@@ -133,7 +133,7 @@ body {
     }
     .molt-card-body {
         position: relative;
-        padding: var(--card-padding) 0 var(--card-padding) var(--card-padding);
+        padding: var(--card-padding);
         height: 100%;
         background-color: var(--off-white);
         color: black;
@@ -146,16 +146,20 @@ body {
     user-select: none;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .info {
     font-weight: bold;
     background-color: var(--orange);
     color: black;
     &:hover {
         background-color: black;
-        color: var(--off-white);
+        color: var(--orange);
     }
     &:active {
-        background-color: var(--orange);
+        background-color: var(--yellow);
         color: black;
     }
 }
