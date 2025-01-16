@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1736982793059,
+  "timestamp": 1737040377577,
   "index": "/the-molt-character-generator/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/the-molt-character-generator/favicon.ico",
         "/the-molt-character-generator/index.html",
-        "/the-molt-character-generator/main-ZM5K3XAK.js",
+        "/the-molt-character-generator/main-WEEGNSAP.js",
         "/the-molt-character-generator/manifest.webmanifest",
         "/the-molt-character-generator/polyfills-FFHMD2TL.js",
         "/the-molt-character-generator/styles-2U4SBRMI.css"
@@ -32,6 +32,7 @@
         "/the-molt-character-generator/assets/fonts/MetalMania.ttf",
         "/the-molt-character-generator/assets/fonts/Skranji-Bold.ttf",
         "/the-molt-character-generator/assets/fonts/Skranji-Regular.ttf",
+        "/the-molt-character-generator/assets/images/nosnibor.png",
         "/the-molt-character-generator/icons/android-chrome-192x192.png",
         "/the-molt-character-generator/icons/android-chrome-512x512.png",
         "/the-molt-character-generator/icons/apple-touch-icon.png",
@@ -51,14 +52,15 @@
     "/the-molt-character-generator/assets/fonts/MetalMania.ttf": "f8361b31da9fd6e87019291416a293a48f55627d",
     "/the-molt-character-generator/assets/fonts/Skranji-Bold.ttf": "fd5ec6c20a4830ee25ea31a08beb9023848854c3",
     "/the-molt-character-generator/assets/fonts/Skranji-Regular.ttf": "a1590d7b5d58c3383d3bdcf5d1020af4bcc8a7df",
+    "/the-molt-character-generator/assets/images/nosnibor.png": "6664faeae1fdf80d712443f7505f36b4cebd184c",
     "/the-molt-character-generator/favicon.ico": "242cad7e8e4d0fe3f88b25a7fde0eca00e084f60",
     "/the-molt-character-generator/icons/android-chrome-192x192.png": "e62cbc755cc0fe980c851556714606aaeaf5acef",
     "/the-molt-character-generator/icons/android-chrome-512x512.png": "d9ef17eee14c6b418c32bee40f2919c32f901598",
     "/the-molt-character-generator/icons/apple-touch-icon.png": "f7a0359ce84ef106e37638fca5314f511e6e343b",
     "/the-molt-character-generator/icons/favicon-16x16.png": "ccdfcafd6e7f9e8e59ffc1cd4a3e2782dc8bd12f",
     "/the-molt-character-generator/icons/favicon-32x32.png": "3171483e64c7c3d4a33dc03a0f60c836cd6156ea",
-    "/the-molt-character-generator/index.html": "d072b74715640a3886ab1680a56580d7c213c067",
-    "/the-molt-character-generator/main-ZM5K3XAK.js": "31efab5955f2051a283075a439d2064004e263a8",
+    "/the-molt-character-generator/index.html": "52f48e2f3f32837e8e7f75f38797b9e24ead8d96",
+    "/the-molt-character-generator/main-WEEGNSAP.js": "b215837c7efcb69b6e3f22b597ea2da8e34eca2c",
     "/the-molt-character-generator/manifest.webmanifest": "08cba70dee47769f4ed792527c99f91c183709eb",
     "/the-molt-character-generator/media/Alegreya-JSGAVCRA.ttf": "6609880948728419617455150aea67982b0319c1",
     "/the-molt-character-generator/media/MetalMania-5IXLQWC4.ttf": "f8361b31da9fd6e87019291416a293a48f55627d",
