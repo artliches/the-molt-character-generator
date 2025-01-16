@@ -35,6 +35,18 @@
     @include flex-column(1rem);
 }
 
+.job-image {
+    display: flex;
+    justify-content: center;
+    img {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        box-shadow: 5px 5px black;
+    }
+}
+
 @media only screen and (min-width: 425px) {
     .molt-card-header {
         flex-direction: row;
