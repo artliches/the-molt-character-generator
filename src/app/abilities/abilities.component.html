@@ -1,8 +1,56 @@
 <div class="molt-card odd">
-    <div class="molt-card-header clickable">
-        ABILITIES
+    <div class="molt-header-utility-layout">
+        <div (click)="rerollAll()" class="molt-card-header clickable">
+            ABILITIES
+        </div>
+        <div (click)="showRolls = !showRolls" class="molt-card-header clickable utility-button">
+            {{showRolls ? 'HIDE': 'SHOW'}} ROLLS
+        </div>
     </div>
     <div class="molt-card-body">
-        Lorem ipsum odor amet, <span class="clickable info">consectetuer</span> adipiscing elit. Morbi velit mus habitant fermentum vulputate. Aenean quam lacus vestibulum nibh augue egestas morbi primis mauris. Euismod lacinia diam laoreet placerat; libero cubilia. Sagittis id imperdiet pulvinar a commodo massa dapibus. Nulla sollicitudin auctor curae suspendisse metus mus.
+        <div class="abilities-layout">
+            @for (ability of abilitiesObj; track $index) {
+                <div class="ability-layout">
+                    <strong (click)="rerollAbilities(ability.name)" class="ability-name clickable info">{{ability.name | uppercase}}</strong>
+                    <div class="ability-descrip">{{ability.descrip}}</div>
+                    <strong class="ability-value">{{ability.value}}</strong>
+                    @if (showRolls) {
+                        <em class="ability-rolls">
+                            [{{ability.rolledDice}}]
+                            @if (ability.mod) {
+                                @if (ability.mod > 0) {
+                                    +
+                                }
+                                {{ability.mod}}
+                            }
+                        </em>
+                    }
+                </div>
+            }
+        </div>
+        <div class="abilities-layout stats">
+            @for (stat of statsObj; track $index) {
+                <div class="stat-layout">
+                    <strong (click)="rerollStat(stat.name)" class="stat-name clickable info">
+                        {{stat.name | uppercase}}
+                    </strong>
+                    <div class="stat-descrip" [innerHTML]="stat.descrip"></div>
+                    <strong class="stat-value">
+                        {{stat.value}}
+                        @if (stat.name === 'silver') {
+                            S
+                        }
+                        @if (stat.name === 'favors') {
+                            (d{{stat.dieSize}})
+                        }
+                    </strong>
+                    @if (showRolls) {
+                        <em class="stat-rolls">
+                            {{stat.rolledValue}}
+                        </em>
+                    }
+                </div>
+            }
+        </div>
     </div>
 </div>

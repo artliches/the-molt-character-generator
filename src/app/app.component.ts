@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   currentJob: JobObj = {} as JobObj;
+  rerollAllEvent: boolean = false;
 
   ngOnInit(): void {
     this.randomNumber.shuffleArray(JOBS);
@@ -29,6 +30,7 @@ export class AppComponent implements OnInit {
 
   rerollAll() {
     this.getNewJob();
+    // this.rerollAllEvent = !this.rerollAllEvent;
   }
 
   getNewJob() {

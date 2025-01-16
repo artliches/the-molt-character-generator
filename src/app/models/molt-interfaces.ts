@@ -25,3 +25,21 @@ export interface JobObj {
     },
     extras?: string[],
 };
+
+export interface AbilityObj {
+    name: string,
+    descrip: string,
+    value: number,
+    rolledDice: number[],
+    mod: number,
+};
+
+export interface StatsObj {
+    name: string,
+    descrip: string,
+    value: number,
+    rollNum?: number,
+    rolledValue?: string,
+    mod?: number,
+    dieSize?: number,
+};

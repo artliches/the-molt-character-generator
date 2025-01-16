@@ -1,0 +1,106 @@
+.molt-header-utility-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .utility-button {
+        font-size: var(--standard);
+    }
+}
+
+.abilities-layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
+    &:not(.stats) {
+        margin-bottom: var(--small);
+    }
+    &.stats {
+        padding-top: var(--small);
+        border-top: 2px dashed var(--orange);
+    }
+}
+
+.ability-layout {
+    display: grid;
+    column-gap: var(--small);
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: min-content;
+    grid-template-areas:
+        "name       value"
+        "descrip    value"
+        "rolls      rolls";
+    .ability-name {
+        width: max-content;
+        grid-area: name;
+    }
+    .ability-descrip {
+        font-size: var(--small);
+        grid-area: descrip;
+    }
+    .ability-value {
+        font-family: 'Skranji-Bold';
+        font-size: var(--larger);
+        place-self: center;
+        grid-area: value;
+    }
+    .ability-rolls {
+        font-size: var(--small);
+        grid-area: rolls;
+    }
+}
+
+.stat-layout {
+    display: grid;
+    column-gap: var(--small);
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: min-content;
+    grid-template-areas:
+        "name       value"
+        "descrip    value"
+        "rolls      rolls";
+    .stat-name {
+        width: max-content;
+        grid-area: name;
+    }
+    .stat-descrip {
+        font-size: var(--small);
+        grid-area: descrip;
+    }
+    .stat-value {
+        font-family: 'Skranji-Bold';
+        font-size: var(--larger);
+        place-self: center;
+        grid-area: value;
+    }
+    .stat-rolls {
+        font-size: var(--small);
+        grid-area: rolls;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .molt-header-utility-layout {    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "buttons";
+        div:not(.utility-button) {
+            grid-area: buttons;
+            place-self: center;
+        }
+        .utility-button {
+            grid-area: buttons;
+            place-self: end;
+            margin-right: var(--small);
+        }
+    }
+    .abilities-layout {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-evenly;
+    }
+}

@@ -136,7 +136,7 @@ export const JOBS = [
             strength: 2,
             hp: 8,
             favors: 4,
-            silver: 'd4x10',
+            silver: '1d4x10',
             pp: `[Presence]+d4`
         },
         gear: {
@@ -208,7 +208,7 @@ export const JOBS = [
             focus: 1,
             hp: 6,
             favors: 4,
-            silver: 'd2x10',
+            silver: '1d2x10',
             pp: `[Presence]+d6`
         },
         gear: {
@@ -282,7 +282,7 @@ export const JOBS = [
             focus: 1,
             hp: 6,
             favors: 4,
-            silver: 'd2x10',
+            silver: '1d2x10',
             pp: `d4`
         },
         gear: {
@@ -432,7 +432,7 @@ export const JOBS = [
         stats: {
             hp: 6,
             favors: 4,
-            silver: 'd4x10',
+            silver: '1d4x10',
             pp: `[Presence]+d8`,
             strength: 1,
             focus: 1
@@ -508,7 +508,7 @@ export const JOBS = [
         stats: {
             hp: 4,
             favors: 4,
-            silver: 'd4x10',
+            silver: '1d4x10',
             pp: `[Presence]+d4`,
             strength: -1,
             toughness: -1,
