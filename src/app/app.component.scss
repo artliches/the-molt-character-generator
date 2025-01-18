@@ -3,9 +3,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-    grid-gap: 1rem;
     padding: 0 var(--card-padding);
-
 
     header, footer {
         text-align: center;
@@ -18,13 +16,13 @@
         -webkit-text-stroke: 1px black;
     }
     footer {
+        margin-top: 1rem;
         border-top: 2px solid black;
         padding-top: 1rem;
         font-size: var(--small);
         div {
             background-color: rgba( 0, 0, 0, 0.6 );
             height: max-content;
-            // backdrop-filter: blur(10px);
             text-align: center;
             color: var(--off-white);
         }
@@ -32,7 +30,6 @@
 
     .molt-body-layout {
         .molt-body {
-            padding-top: 1rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -50,7 +47,7 @@
                 grid-gap: unset;
                 grid-template-areas: 
                     "toolbar    toolbar"
-                    "abilities  abilities"
+                    "abilities  job"
                     "identity   job"
                     "equipment  equipment";
 

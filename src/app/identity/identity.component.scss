@@ -1,0 +1,12 @@
+.molt-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    :nth-child(odd) {
+        transform: rotate(-0.5deg);
+    }
+    :nth-child(even) {
+        transform: rotate(0.5deg);
+    }
+}

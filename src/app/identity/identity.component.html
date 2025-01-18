@@ -1,8 +1,20 @@
 <div class="molt-card even">
-    <div class="molt-card-header clickable">
-        IDENTITY
+    <div (click)="rerollAll()" class="molt-card-header clickable">
+        YOU ARE {{identityObj.name | uppercase}}!
     </div>
     <div class="molt-card-body">
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Morbi velit mus habitant fermentum vulputate. Aenean quam lacus vestibulum nibh augue egestas morbi primis mauris. Euismod lacinia diam laoreet placerat; libero cubilia. Sagittis id imperdiet pulvinar a commodo massa dapibus. Nulla sollicitudin auctor curae suspendisse metus mus.
+        <div>Forged by heat and hate you roar your name: <span (click)="rerollName()" class="clickable info">{{identityObj.name | uppercase}}</span>!</div>
+        <div>Eager to breach the surface and soak the earth in the blood of those mewling meatbags, years of brutal combat have left you 
+            <span (click)="rerollPersonality('first')" class="clickable info">{{identityObj.personalityObj.first | lowercase}}</span>, 
+            <span (click)="rerollPersonality('second')" class="clickable info">{{identityObj.personalityObj.second | lowercase}}</span>, 
+            and with <span (click)="rerollHonor()" class="clickable info">{{identityObj.honor}}</span> that you flaunt like a badge of honor.
+        </div>
+        <div>Surviving the endless fighting of Kör has instilled within you 
+            @if (uniqueIdo) {
+                <span (click)="rerollIdio()" class="clickable info">{{uniqueIdo}}</span>
+            } @else {
+                <span (click)="rerollIdio()" class="clickable info">{{identityObj.idio}}</span>
+            }
+        </div>
     </div>
 </div>

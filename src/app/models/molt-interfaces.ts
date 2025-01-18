@@ -43,3 +43,13 @@ export interface StatsObj {
     mod?: number,
     dieSize?: number,
 };
+
+export interface IdentityObj {
+    name: string,
+    personalityObj: {
+        first: string,
+        second: string,
+    },
+    honor: string,
+    idio: string,
+};

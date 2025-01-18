@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
   rerollAll() {
     this.getNewJob();
-    // this.rerollAllEvent = !this.rerollAllEvent;
+    this.rerollAllEvent = !this.rerollAllEvent;
   }
 
   getNewJob() {
