@@ -1,8 +1,43 @@
 <div class="molt-card even">
-    <div class="molt-card-header clickable">
+    <div (click)="rerollAll()" class="molt-card-header clickable">
         EQUIPMENT
     </div>
     <div class="molt-card-body">
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Morbi velit mus habitant fermentum vulputate. Aenean quam lacus vestibulum nibh augue egestas morbi primis mauris. Euismod lacinia diam laoreet placerat; libero cubilia. Sagittis id imperdiet pulvinar a commodo massa dapibus. Nulla sollicitudin auctor curae suspendisse metus mus.
+        <div>
+            <strong><u>STARTING EQUIPMENT</u></strong>
+            <ul>
+                <li (click)="rerollStartingEquipment('first')" [innerHTML]="startingEquipmentObj.first"></li>
+                <li (click)="rerollStartingEquipment('second')" [innerHTML]="startingEquipmentObj.second"></li>
+                <li (click)="rerollStartingEquipment('third')" [innerHTML]="startingEquipmentObj.third"></li>
+            </ul>
+        </div>
+        @if (weapon) {
+            <div>
+                <strong><u>WEAPON</u></strong>
+                @if (typeof currentJob.gear.weapons === 'number') {
+                    <div (click)="rerollWeapon()" [innerHTML]="weapon"></div>
+                } @else if (numUrns > 0) {
+                    <div class="urn-card">
+                        <div class="urn-card-title">
+                            <strong (click)="rerollUrnNum()" class="clickable">{{numUrns}} MOLTEN ICHOROUS LEECH-FILLED URNS</strong>
+                        </div>
+                        <div class="urn-card-body">
+                            <span [innerHTML]="weapon"></span>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        @if (armor) {
+            <div>
+                <strong><u>ARMOR</u></strong>
+                @if (typeof currentJob.gear.armor === 'number') {
+                    <div (click)="rerollArmor()" [innerHTML]="armor"></div>
+
+                } @else {
+                    <div [innerHTML]="armor"></div>
+                }
+            </div>
+        }
     </div>
 </div>

@@ -20,7 +20,7 @@ export interface JobObj {
         pp: string,
     },
     gear: {
-        weapons?: number,
+        weapons?: number | string,
         armor?: string | number,
     },
     extras?: string[],
@@ -52,4 +52,10 @@ export interface IdentityObj {
     },
     honor: string,
     idio: string,
+};
+
+export interface StartingEquipmentObj {
+    first: string,
+    second: string,
+    third: string,
 };

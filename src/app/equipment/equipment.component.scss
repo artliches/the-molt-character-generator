@@ -1,0 +1,43 @@
+.molt-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    >div {
+        &:nth-child(odd) {
+            transform: rotate(-0.5deg);
+        }
+        &:nth-child(even) {
+            transform: rotate(0.5deg);
+        }
+    }
+
+}
+
+.urn-card {
+    border: 2px solid var(--orange);
+    background-color: black;
+    color: var(--off-white);
+    .urn-card-title {
+        width: max-content;
+        margin-top: 2px;
+        margin-left: 2px;
+        padding: 0.2rem;
+        background-color: var(--yellow);
+        border: 2px solid var(--orange);
+        box-shadow: -2px -2px var(--orange);
+        color: black;
+        &:hover {
+            background-color: black;
+            color: var(--yellow);
+            transition: all .06s ease-in-out !important;
+        }
+        &:active {
+            box-shadow: none;
+            transform: translate((-2px, -2px));
+        }
+    }
+    .urn-card-body {
+        padding: var(--card-padding);
+    }
+}

@@ -25,6 +25,9 @@
             height: max-content;
             text-align: center;
             color: var(--off-white);
+            &:first-of-type {
+                padding-top: 0.5rem;
+            }
         }
     }
 
