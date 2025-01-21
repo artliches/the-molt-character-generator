@@ -59,3 +59,9 @@ export interface StartingEquipmentObj {
     second: string,
     third: string,
 };
+
+export interface RelicObj {
+    title: string,
+    descrip: string,
+    index: number,
+};

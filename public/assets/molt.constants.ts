@@ -731,10 +731,10 @@ export const STARTING_EQUIPMENT = [
         `<strong class="clickable info">Urn of Mother’s Mud</strong> (<u>Presence +d6 uses</u>, <em>stops bleeding</em>, <strong>heals d4 HP</strong>)`,
         `<strong class="clickable info">Key carved from an ancient bone</strong>. What it unlocks is unknown.`,
         `Palm-sized <strong class="clickable info">mirror</strong>`,
-        `<strong class="clickable info">Restored Relic</strong> - see below`,
+        `<strong class="clickable info">Random Relic</strong> - see below`,
         `Pet six-legged <strong class="clickable info">lizard</strong>`,
         `<strong class="clickable info">Mummified human hand</strong> strung up on a necklace`,
-        `<strong class="clickable info">Random unbroken Relic</strong> - see below`,
+        `<strong class="clickable info">Random Relic</strong> - added below`,
         `<strong class="clickable info">Shovel</strong>`,
     ],
     [
@@ -742,7 +742,7 @@ export const STARTING_EQUIPMENT = [
         `Sack of <strong class="clickable info">unhatched bug eggs</strong> (<strong>d8 days’ worth of food</strong>)`,
         `<strong class="clickable info">Ink and quill</strong>`,
         `<strong class="clickable info">Ancient amulet</strong>, glows in the dark`,
-        `<strong class="clickable info">Random unbroken Relic</strong> - see below`,
+        `<strong class="clickable info">Random Relic</strong> - see below`,
         `<strong class="clickable info">Mesh hammock</strong>`,
         `<strong class="clickable info">Decapitated human head</strong>, still mutters words occasionally`,
         `<strong class="clickable info">Silver broach of SHE</strong> hatching from the planet`,
@@ -772,3 +772,50 @@ export const WEAPONS = [
     `<strong class="clickable info">Svärdstav (pole sword)</strong> (<strong>d8</strong>)  <em>25s</em>`,
     `<strong class="clickable info">Marrowgut</strong> (<strong>d10</strong>) <em>20s</em>`,
 ];
+
+export const RELICS = [
+{
+    title: `Augmentable Destabilizer`,
+    descrip: `
+         Alien craftsmanship, made of materials not salvageable in Kör. 
+        <p>
+            <div><u>Open the locket of this device so that light reflects off of its mirrored surface.</u></div>
+            <div><strong>Wherever the light shines, a portal opens to an unknown destination</strong>.</div>
+        </p>
+    `
+},
+{
+    title: `Embreson’s Box of Secrets`,
+    descrip: `
+        Made of polished brass and covered in ornate latches, hinges, and hooks. 
+        <p>
+            <div>This decorative puzzle box, once opened, <u>can fit one object 5× its size</u>.</div>
+            <div><strong>Focus DR18 TEST to open the first time</strong>.</div>
+        </p>
+    `,
+},
+{
+    title: `Hammer of Grunthar`,
+    descrip:`
+    Brought to Kör through one of the Rifts, little is known about this magickal hammer, the eyes of which blink as though it understands all that is being said. Its leathery skin is cold to the touch yet wrinkles and recoils ever so slightly as a hand draws near. 
+
+    <p>
+        <div><em>−2 DR to attack</em></div>
+        <div><strong>d12 damage. Crits on 18–20</strong></div>
+        <div><strong><u>Bestial Stare.</u></strong> Enemies check morale at disadvantage.</div>
+    </p>
+`
+},
+{
+    title: `Watchful Eye`,
+    descrip: `
+        One of these blinking lockets can be placed in a location to see through its eye. 
+        <p>
+            <div><strong>Focus DR12 TEST</strong> to harness, <u>spend 1 PP for each round viewing</u>.</div>
+            <div><em>Must be the last person to have touched it</em>.</div>
+        </p>
+
+    `
+}
+
+]

@@ -1,8 +1,8 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { JobObj, StartingEquipmentObj } from '../models/molt-interfaces';
+import { JobObj, RelicObj, StartingEquipmentObj } from '../models/molt-interfaces';
 import { RandomNumberService } from '../services/random-number.service';
 import { CommonModule } from '@angular/common';
-import { ARMOR, STARTING_EQUIPMENT, WEAPONS } from '../../../public/assets/molt.constants';
+import { ARMOR, RELICS, STARTING_EQUIPMENT, WEAPONS } from '../../../public/assets/molt.constants';
 
 @Component({
   selector: 'app-equipment',
@@ -14,6 +14,7 @@ export class EquipmentComponent implements OnChanges {
   @Input() currentJob: JobObj = {} as JobObj;
 
   startingEquipmentObj: StartingEquipmentObj = {} as StartingEquipmentObj;
+  relicArray: RelicObj[] = [];
   trimmedArmorArray: string[] = [];
   trimmedWeaponArray: string[] = [];
   weapon: string = '';
@@ -33,6 +34,9 @@ export class EquipmentComponent implements OnChanges {
   rerollAll() {
     this.weapon = '';
     this.armor = '';
+    this.relicArray = [];
+
+    this.random.shuffleArray(RELICS);
 
     this.getAllStartingEquipment();
 
@@ -114,10 +118,22 @@ export class EquipmentComponent implements OnChanges {
       }
 
       this.startingEquipmentObj[currentEquipmentKey as keyof typeof this.startingEquipmentObj] = equipmentSection[newIndex];
+
+      if (this.startingEquipmentObj[currentEquipmentKey as keyof typeof this.startingEquipmentObj].includes('Relic')) {
+        this.rerollRelic(index);
+      }
     });
   }
 
   rerollStartingEquipment(key: string) {
+    //remove relic if we're rerolling a relic equipment
+    if (this.startingEquipmentObj[key as keyof typeof this.startingEquipmentObj].includes('Relic')) {
+      //find the relic related to this 
+      const relicKey = key === 'second' ? 1 : 2;
+      const relicToRemoveIndex = this.relicArray.findIndex(relic => relic.index === relicKey);
+      this.relicArray.splice(relicToRemoveIndex, 1);
+    }
+
     const equipmentSection = STARTING_EQUIPMENT[key === 'first' ? 0 : key === 'second' ? 1 : 2];
     let newIndex = equipmentSection.indexOf(this.startingEquipmentObj[key as keyof typeof this.startingEquipmentObj]);
 
@@ -128,5 +144,75 @@ export class EquipmentComponent implements OnChanges {
     }
 
     this.startingEquipmentObj[key as keyof typeof this.startingEquipmentObj] = equipmentSection[newIndex];
+
+    if (this.startingEquipmentObj[key as keyof typeof this.startingEquipmentObj].includes('Relic')) {
+      this.rerollRelic(key === 'second' ? 1 : 2);
+    }
+  }
+
+  rerollAllRelics() {
+    this.relicArray.forEach(relic => {
+      this.rerollRelic(relic.index, true);
+    })
+  }
+
+  rerollRelic(index: number, replaceRelic?: boolean) {
+    if (this.relicArray.length === 0) {
+      //add new relic to empty array
+      const relicObj: RelicObj = {
+        title: RELICS[0].title,
+        descrip: RELICS[0].descrip,
+        index: index
+      };
+      this.relicArray.push(relicObj);
+    } else if (replaceRelic) {
+      // replacing existing relic
+      let indexesToSkip: number[] = [];
+      const relicToReplaceIndexInArray = this.relicArray.findIndex(relic => relic.index === index);
+
+      this.relicArray.forEach(relic => {
+        indexesToSkip.push(RELICS.findIndex(relicInArray => relicInArray.title === relic.title));
+      });
+
+      let newIndex = RELICS.findIndex(relic => relic.title === this.relicArray[relicToReplaceIndexInArray].title);
+
+      do {
+        newIndex ++;
+      } while (indexesToSkip.includes(newIndex));
+
+      if (newIndex + 1 === RELICS.length) {
+        newIndex = 0;
+      }
+
+      const relicSaveObj: RelicObj = {
+        title: RELICS[newIndex].title,
+        descrip: RELICS[newIndex].descrip,
+        index: this.relicArray[relicToReplaceIndexInArray].index
+      };
+
+      this.relicArray[relicToReplaceIndexInArray] = relicSaveObj;
+    } else if (this.relicArray.length > 0) {
+      //add new relic to non-empty array
+      let indexesToSkip: number[] = [];
+      this.relicArray.forEach(relic => {
+        indexesToSkip.push(RELICS.findIndex(relicInArray => relicInArray.title === relic.title));
+      });
+
+      let newIndex = -1;
+
+      do {
+        newIndex ++;
+      } while (indexesToSkip.includes(newIndex));
+
+      if (newIndex + 1 >= RELICS.length) {
+        newIndex = 0;
+      }
+
+      this.relicArray.push({
+        title: RELICS[newIndex].title,
+        descrip: RELICS[newIndex].descrip,
+        index: index
+      });
+    }
   }
 }
