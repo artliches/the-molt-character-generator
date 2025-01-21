@@ -68,7 +68,7 @@ export const JOBS = [
         },
         gear: {
             weapons: 4,
-            armor: `<strong class="underline">Stone Skin</strong>, <strong>-d2</strong>`
+            armor: `<strong class="underline">STONE SKIN</strong>, <strong>-d2</strong>`
         }
     },
     //BURNADAZI
@@ -213,7 +213,7 @@ export const JOBS = [
         },
         gear: {
             weapons: 4,
-            armor: `<strong class="underline">Natural Carapice</strong>, <strong>-d2</strong>`
+            armor: `<strong class="underline">NATURAL CARAPICE</strong>, <strong>-d2</strong>`
         }
     },
     //ERDVERKEN
@@ -287,7 +287,7 @@ export const JOBS = [
         },
         gear: {
             weapons: 4,
-            armor: `<strong class="underline">Natural Carapice</strong>, <strong>-d2</strong>`
+            armor: `<strong class="underline">NATURAL CARAPICE</strong>, <strong>-d2</strong>`
         },
         extras: [
             `Start with <strong>d4 human bones</strong>. Each bone counts as a Power Point (PP). When used, <strong>it crumbles to ash</strong>.`
@@ -363,7 +363,7 @@ export const JOBS = [
         },
         gear: {
             armor: 2,
-            leech: '2d6'
+            weapons: '2d6'
         },
         extras: [
             `Start with <strong>2d6</strong> <strong><u>Molten Ichorous Leech-filled Urns</u></strong>`,
@@ -439,7 +439,7 @@ export const JOBS = [
         },
         gear: {
             weapons: 6,
-            armor: `<strong><u>Bone Mask</u></strong>.`,
+            armor: `<strong><u>BONE MASK</u></strong>. Go <u>unseen by undead</u>. <em>It is fused to your face</em>. <strong>Take d6 damage if removed</strong>.`,
         },
         extras: [
             `Start with a <strong>Bone Mask</strong>. The magick cast when carving your mask allows you to go <u>unseen by undead</u>. <em>It is fused to your face</em>. <strong>Take d6 damage if removed</strong>.`
@@ -712,4 +712,63 @@ export const IDIO = [
     `coprophagia. You love the smell and taste of that which has already been processed.`,
     `a disrespect of personal space. When speaking to anyone, you must be as close as possible to their face.`,
     `a need to cover yourself in thin meat strips whenever possible. Your stench is unyielding.`,
+];
+
+export const STARTING_EQUIPMENT = [
+    [
+        `<strong class="clickable info">Pebble</strong> with a face carved into it.`,
+        `<strong class="clickable info">Finger</strong> of someone or <em>something</em>.`,
+        `Pouch woven from human hair — holds <strong class="clickable info">3 small-sized items</strong>.`,
+        `Backpack sewn from the hide of a loved one — <strong class="clickable info">holds 7 normal-sized items</strong>.`,
+        `Hand-drawn sled — <strong class="clickable info">holds 16 normal-sized items</strong>.`,
+        `Pack Slug — will carry <strong class="clickable info">18 normal-sized items</strong>, <em>sometimes wanders off</em>.`,
+    ],
+    [
+        `<strong class="clickable info">Heat-resistant</strong> net`,
+        `Miniature obsidian carving of <strong class="clickable info">SHE</strong>`,
+        `<strong class="clickable info">Climbing spikes</strong>`,
+        `25-foot rope of <strong class="clickable info">woven human hair</strong>`,
+        `<strong class="clickable info">Urn of Mother’s Mud</strong> (<u>Presence +d6 uses</u>, <em>stops bleeding</em>, <strong>heals d4 HP</strong>)`,
+        `<strong class="clickable info">Key carved from an ancient bone</strong>. What it unlocks is unknown.`,
+        `Palm-sized <strong class="clickable info">mirror</strong>`,
+        `<strong class="clickable info">Restored Relic</strong> - see below`,
+        `Pet six-legged <strong class="clickable info">lizard</strong>`,
+        `<strong class="clickable info">Mummified human hand</strong> strung up on a necklace`,
+        `<strong class="clickable info">Random unbroken Relic</strong> - see below`,
+        `<strong class="clickable info">Shovel</strong>`,
+    ],
+    [
+        `<strong class="clickable info">Crudely drawn map</strong> of the surface`,
+        `Sack of <strong class="clickable info">unhatched bug eggs</strong> (<strong>d8 days’ worth of food</strong>)`,
+        `<strong class="clickable info">Ink and quill</strong>`,
+        `<strong class="clickable info">Ancient amulet</strong>, glows in the dark`,
+        `<strong class="clickable info">Random unbroken Relic</strong> - see below`,
+        `<strong class="clickable info">Mesh hammock</strong>`,
+        `<strong class="clickable info">Decapitated human head</strong>, still mutters words occasionally`,
+        `<strong class="clickable info">Silver broach of SHE</strong> hatching from the planet`,
+        `<strong class="clickable info">Spyglass</strong>`,
+        `<strong class="clickable info">Wind instrument</strong> carved from a hollowed-out bone`,
+        `<strong class="clickable info">Bottle</strong> of fine Salazarite swill `,
+        `<strong class="clickable info">Folded-up drawing</strong> of a Marauder’s siblings`,
+    ],
+];
+
+export const ARMOR = [
+    `<strong class="clickable info">TIER 0</strong> <u>No armor</u>`,
+    `<strong class="clickable info">TIER 1</strong> <u>Creature Hide</u>: <strong>−d2 damage</strong>. <em>5s</em>`,
+    `<strong class="clickable info">TIER 2</strong> <u>Scorched Leather</u>: <strong>−d4 damage</strong>, +2 DR on Agility tests and defense. <em>10s</em>`,
+    `<strong class="clickable info">TIER 3</strong> <u>Bonemail</u>: <strong>−d6 damage</strong>, +4 DR on Agility tests, +2 DR to defend. <em>18s</em>`,
+];
+
+export const WEAPONS = [
+    `<strong class="clickable info">Fractured Stalactite</strong> (<strong>d4</strong>)`,
+    `<strong class="clickable info">Sling</strong> w/ bag of Presence +10 rocks (<strong>d4/rock</strong>)`,
+    `<strong class="clickable info">Basilisk Tooth</strong> (<strong>d4</strong>) <em>4s</em>`,
+    `<strong class="clickable info">Jagged Obsidian</strong> (<strong>d4</strong>) <em>2s</em>`,
+    `<strong class="clickable info">Sword</strong> (<strong>d6</strong>) <em>34s</em>`,
+    `<strong class="clickable info">Bone Axe</strong> (<strong>d6</strong>) <em>10s</em>`,
+    `<strong class="clickable info">Magick-Charged Shock Prod</strong> (<strong>d8, 1 PP/use</strong>) <em>44s</em>`,
+    `<strong class="clickable info">[d4] Explosive Burilli Crystals</strong> (<strong>d6 to d4 targets near each other</strong>) <em>8s each</em>`,
+    `<strong class="clickable info">Svärdstav (pole sword)</strong> (<strong>d8</strong>)  <em>25s</em>`,
+    `<strong class="clickable info">Marrowgut</strong> (<strong>d10</strong>) <em>20s</em>`,
 ];
