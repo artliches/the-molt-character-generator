@@ -22,10 +22,13 @@ export class AppComponent implements OnInit {
   currentJob: JobObj = {} as JobObj;
   rerollAllEvent: boolean = false;
   hasMaxPowerPoints: boolean = false;
+  inIFrame: boolean = false;
 
   ngOnInit(): void {
     this.randomNumber.shuffleArray(JOBS);
     this.getNewJob();
+
+    this.inIFrame = window.self !== window.top;
   }
 
   rerollAll() {
