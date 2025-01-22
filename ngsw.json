@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1737558268958,
+  "timestamp": 1737565034459,
   "index": "/the-molt-character-generator/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/the-molt-character-generator/favicon.ico",
         "/the-molt-character-generator/index.html",
-        "/the-molt-character-generator/main-MBURKIDP.js",
+        "/the-molt-character-generator/main-PHIKFWGD.js",
         "/the-molt-character-generator/manifest.webmanifest",
         "/the-molt-character-generator/polyfills-FFHMD2TL.js",
-        "/the-molt-character-generator/styles-IU6ODEA2.css"
+        "/the-molt-character-generator/styles-YFKBDUFU.css"
       ],
       "patterns": []
     },
@@ -73,15 +73,15 @@
     "/the-molt-character-generator/icons/apple-touch-icon.png": "f7a0359ce84ef106e37638fca5314f511e6e343b",
     "/the-molt-character-generator/icons/favicon-16x16.png": "ccdfcafd6e7f9e8e59ffc1cd4a3e2782dc8bd12f",
     "/the-molt-character-generator/icons/favicon-32x32.png": "3171483e64c7c3d4a33dc03a0f60c836cd6156ea",
-    "/the-molt-character-generator/index.html": "2d8e963766c9a4237b819cb6a36394f790a967ff",
-    "/the-molt-character-generator/main-MBURKIDP.js": "bc29f10b656d3d7f2ff5bbd7788a8e5850a7d642",
+    "/the-molt-character-generator/index.html": "6685a538d097554b430336c4d578f35d5f332e6e",
+    "/the-molt-character-generator/main-PHIKFWGD.js": "f3bfb1c5040ed619c997948cdb458a1ecd48c042",
     "/the-molt-character-generator/manifest.webmanifest": "efa47147be3bd6113300ec757934db03395fe761",
     "/the-molt-character-generator/media/Alegreya-JSGAVCRA.ttf": "6609880948728419617455150aea67982b0319c1",
     "/the-molt-character-generator/media/MetalMania-5IXLQWC4.ttf": "f8361b31da9fd6e87019291416a293a48f55627d",
     "/the-molt-character-generator/media/Skranji-Bold-GHJDPRNH.ttf": "fd5ec6c20a4830ee25ea31a08beb9023848854c3",
     "/the-molt-character-generator/media/Skranji-Regular-3P2KO6WS.ttf": "a1590d7b5d58c3383d3bdcf5d1020af4bcc8a7df",
     "/the-molt-character-generator/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/the-molt-character-generator/styles-IU6ODEA2.css": "08784ba99c9912aa5436536c56617ce7849063a7"
+    "/the-molt-character-generator/styles-YFKBDUFU.css": "0f759bbc58256e97801ee1aa500ef4c86729ba96"
   },
   "navigationUrls": [
     {
