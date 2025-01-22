@@ -16,6 +16,7 @@ export class JobComponent implements OnChanges {
 
   @Input() currentJob: JobObj = {} as JobObj;
   @Output() newJobEmitter: EventEmitter<boolean> = new EventEmitter();
+  @Output() sightSeerEmitter: EventEmitter<boolean> = new EventEmitter();
 
   chosenJobObj: any = {
     details: '',
@@ -48,6 +49,9 @@ export class JobComponent implements OnChanges {
   }
 
   rerollTraits() {
+    if (this.chosenJobObj.traits.title === 'SIGHT SEER') {
+      this.sightSeerEmitter.emit(false);
+    }
     let newIndex = this.currentJob.traits.indexOf(this.chosenJobObj.traits);
 
     if (newIndex + 1 === this.currentJob.traits.length) {
@@ -57,6 +61,9 @@ export class JobComponent implements OnChanges {
     }
 
     this.chosenJobObj.traits = this.currentJob.traits[newIndex];
+    if (this.chosenJobObj.traits.title === 'SIGHT SEER') {
+      this.sightSeerEmitter.emit(true);
+    }
   }
 
   emitNewJob() {

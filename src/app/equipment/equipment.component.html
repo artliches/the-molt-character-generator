@@ -50,7 +50,7 @@
                 </div>
                 <div class="relic-card-body">
                     @for (relic of relicArray; track $index) {
-                        <div>
+                        <div [ngClass]="{'upper-border': $index > 0}">
                             <strong (click)="rerollRelic(relic.index, true)" class="clickable info">{{relic.title | uppercase}}</strong>
                             <span [innerHTML]="relic.descrip"></span>
                         </div>

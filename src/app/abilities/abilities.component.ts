@@ -14,6 +14,7 @@ export class AbilitiesComponent implements OnChanges {
     private random: RandomNumberService
   ) {}
   @Input() currentJob: JobObj = {} as JobObj;
+  @Input() hasMaxPowerPoints: boolean = false;
   showRolls: boolean = false;
   abilitiesObj: AbilityObj[] = [
     {
@@ -89,6 +90,24 @@ export class AbilitiesComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
       if (changes && changes['currentJob']) {
         this.rerollAll();
+      }
+      if (changes && changes['hasMaxPowerPoints']) {
+        console.log(changes);
+        const rawPPString = this.currentJob.stats.pp;
+        const dieSize = rawPPString.slice(rawPPString.indexOf('d') + 1);
+        let stat = this.statsObj[this.statsObj.findIndex(stat => stat.name === 'power points')];
+
+        if (changes['hasMaxPowerPoints'].currentValue) {
+          stat.rollNum = Number(dieSize);
+        } else if (!changes['hasMaxPowerPoints'].currentValue) {
+          stat.rollNum = this.random.getRandomNumber(1, Number(dieSize));
+        }
+
+        stat.mod = this.abilitiesObj[this.abilitiesObj.findIndex(ability => ability.name === 'presence')].value;
+        stat.value = stat.rollNum! + stat.mod < 0 ? 0 : stat.rollNum! + stat.mod;
+        stat.rolledValue = rawPPString.includes('Presence') ?
+        `${stat.rollNum} ${stat.mod! >= 0 ? '+' : ''} ${stat.mod}` :
+        `${stat.rollNum}`;
       }
   }
 

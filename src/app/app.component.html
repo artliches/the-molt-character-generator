@@ -12,6 +12,7 @@
       <app-abilities
         class="abilities"
         [currentJob]="currentJob"
+        [hasMaxPowerPoints]="hasMaxPowerPoints"
       ></app-abilities>
       <app-identity
         class="identity"
@@ -21,6 +22,7 @@
         class="job"
         [currentJob]="currentJob"
         (newJobEmitter)="getNewJob()"
+        (sightSeerEmitter)="togglePowerPoints($event)"
       ></app-job>
       <app-equipment
         class="equipment"
@@ -35,6 +37,6 @@
     </div>
     <div>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell.</div>
     <div>Web app by <a class="clickable link" target="_blank" href="https://artliches.github.io/dungeonsandcoding/">codeLiches</a></div>
-    <div>v0.65: Digging up relics...</div>
+    <div>v0.7: Second sight</div>
   </footer>
 </div>

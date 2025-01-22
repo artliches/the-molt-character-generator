@@ -192,7 +192,7 @@ export const JOBS = [
             {
                 title: `SHELL SHOCK`,
                 descrip: `
-                    You can pull your entire body inside your shell; <strong><u>Carapace</u></strong> <strong>−d8 while inside</strong>.
+                    You can pull your entire body inside your shell; <strong><u>CARAPACE</u></strong> <strong>−d8 while inside</strong>.
                 `
             },
             {

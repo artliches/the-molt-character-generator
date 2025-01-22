@@ -21,10 +21,10 @@ export class AppComponent implements OnInit {
 
   currentJob: JobObj = {} as JobObj;
   rerollAllEvent: boolean = false;
+  hasMaxPowerPoints: boolean = false;
 
   ngOnInit(): void {
     this.randomNumber.shuffleArray(JOBS);
-
     this.getNewJob();
   }
 
@@ -46,4 +46,13 @@ export class AppComponent implements OnInit {
 
     this.currentJob = JOBS[newIndex];
   }
+
+  togglePowerPoints(event: boolean) {
+    // need timeout to prevent angular error
+    // incase Nosnibor with Sight Seeker spawns in
+    // on load or after
+    setTimeout(() => {
+      this.hasMaxPowerPoints = event;
+    }, 1);
+  } 
 }
