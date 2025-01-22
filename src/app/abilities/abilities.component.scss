@@ -111,3 +111,16 @@
         justify-content: space-evenly;
     }
 }
+
+@media print {
+    .utility-button {
+        display: none;
+    }
+
+    .abilities-layout {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-evenly;
+    }
+}

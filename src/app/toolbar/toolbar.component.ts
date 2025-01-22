@@ -12,4 +12,8 @@ export class ToolbarComponent {
   emitRerollAll() {
     this.rerollAllEmitter.emit(true);
   }
+
+  print() {
+    window.print();
+  }
 }

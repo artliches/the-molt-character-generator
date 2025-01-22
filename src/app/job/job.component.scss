@@ -60,3 +60,17 @@
         }
     }
 }
+
+@media print {
+    .molt-card-header {
+        flex-direction: row;
+        gap: var(--small);
+        .job-name {
+            border: none;
+        }
+        .sub-name:before {
+            content: '|';
+            padding-right: var(--small);
+        }
+    }
+}

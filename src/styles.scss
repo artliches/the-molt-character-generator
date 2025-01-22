@@ -186,3 +186,15 @@ ul {
         color: black;
     }
 }
+
+@media print {
+    * {
+        overflow: visible !important;
+        color: black !important;
+        border-color: black !important;
+        box-shadow: none !important;
+    }
+    .toolbar {
+        display: none;
+    }
+}

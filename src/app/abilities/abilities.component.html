@@ -32,7 +32,11 @@
             @for (stat of statsObj; track $index) {
                 <div class="stat-layout">
                     <strong (click)="rerollStat(stat.name)" class="stat-name clickable info">
-                        {{stat.name | uppercase}}
+                        @if (currentJob.name === 'ERDVERKEN' && stat.name === 'power points') {
+                            HUMAN BONES
+                        } @else {
+                            {{stat.name | uppercase}}
+                        }
                     </strong>
                     <div class="stat-descrip" [innerHTML]="stat.descrip"></div>
                     <strong class="stat-value">
